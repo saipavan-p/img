@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Upload page</title>
+</head>
+<body>
+    <div id="display_image"></div>
+    
+    {% if response_data %}
+    <div id="message-container" style="border: 1px solid #020404; padding: 10px; overflow: auto;">
+        <h2>Description about the image:</h2>
+        <div id="message-container" style="border: 1px solid #010101; padding: 10px; overflow: auto;">
+            <pre style="white-space: pre-wrap; word-wrap: break-word;">{{ response_data.generated_text }}</pre>
+        </div>
+    </div>
+    {% endif %}
+
+    <script src="../static/script.js"></script>
+</body>
+</html> 

@@ -5,16 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/style.css">
-    <title>Object Detection</title>
+    <title>Relavant Links</title>
 </head>
 <body>
-    <h1>Object detection</h1>
-    <button class="search-button" onclick="navigateTosearch()">Search</button>
-    <form action="/upload/" method="post" enctype="multipart/form-data" style="padding-top: 20px">
+    <h1>Get relavant links</h1>
+    <button class="search-button" onclick="navigateToImageDetect()">image-detect</button>
+    <form action="/search/" method="post" enctype="multipart/form-data" style="padding-top: 20px">
         <input type="file" name="file" >
         <button id="submit">Upload</button>
     </form>
-    
     <div id="display_image"></div>
 
     <script src="../static/script.js"></script>
