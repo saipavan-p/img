@@ -1,7 +1,12 @@
 import google.generativeai as genai
+from dotenv import load_dotenv
 import os
 
-API_KEY = "AIzaSyCkvI4TK4q6LmVpTCzvlIo3ulp7rlYBMbk"
+dotenv_path = '.env'
+load_dotenv(dotenv_path)
+
+# API_KEY = "AIzaSyCkvI4TK4q6LmVpTCzvlIo3ulp7rlYBMbk"
+API_KEY = os.environ.get('G_API_KEY')
 genai.configure(api_key=API_KEY)
 
 def process_image_and_generate_text(image_path):
