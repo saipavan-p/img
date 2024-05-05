@@ -26,7 +26,7 @@ def process_image_and_generate_text(image_path):
 def process_image_and_generate_obj_name(image_path):
     sample_file = genai.upload_file(path=image_path, display_name="Sample drawing")
     model = genai.GenerativeModel(model_name="models/gemini-1.5-pro-latest")
-    response = model.generate_content(["Identify the image and give the name as output.", sample_file])
+    response = model.generate_content(["Identify the image and give the name as output.if there is company name to the object give the company name or else just mention name.", sample_file])
 
     response_data = {
         "generated_text": response.text,
